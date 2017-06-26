@@ -1,14 +1,14 @@
-# Installation
-	`npm install`
+## Installation
+	npm install
 
-# Run
-	`npm start`
+## Run
+	npm start
 	
-# Compile
-	`npm run compile`
+## Compile
+	npm run compile
 	
-# development deploy
-	`npm run deploy:dev`
+## development deploy
+	npm run deploy:dev
 	
-# production deploy
-	`npm run deploy:prod`
+## production deploy
+	npm run deploy:prod
