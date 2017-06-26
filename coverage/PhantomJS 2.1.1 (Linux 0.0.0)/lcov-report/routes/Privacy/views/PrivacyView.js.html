@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for routes/Privacy/views/PrivacyView.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">routes/Privacy/views/</a> PrivacyView.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import Logo from 'images/logo.png'
+&nbsp;
+/*eslint-disable */
+export default () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;div className='simple-page simple-page-pad' style={{ padding: '40px' }}&gt;
+      &lt;div style={{textAlign: 'center', paddingBottom: '40px'}}&gt;
+        &lt;img src={Logo} className='' alt='' style={{height: '50px'}} /&gt;
+      &lt;/div&gt;
+      &lt;div className='container wrapper-h-xs-lg reveal-bottom-opacity' data-sr-id='1'
+        style={{
+          visibility: 'visible',
+          opacity: 1,
+          transform: 'translateY(0)',
+          opacity: 1,
+          transition: 'transform 0.8s linear 0s, opacity 0.8s linear 0s'
+        }}&gt;
+        &lt;div className='row'&gt;
+          &lt;div className='col-md-8 col-md-offset-2 wrapper-v-lg panel-terms'
+            style={{background: 'white'}}&gt;
+            &lt;h2&gt;Privacy Policy&lt;/h2&gt;
+            &lt;p&gt;Last updated: September 21, 2016&lt;/p&gt;
+            &lt;p&gt;PROMERE, LLC ("us", "we", or "our") operates the https://promereapp.com website and the Promere mobile application (the "Service").&lt;/p&gt;
+            &lt;p&gt;This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.&lt;/p&gt;
+            &lt;p&gt;We will not use or share your information with anyone except as described in this Privacy Policy.&lt;/p&gt;
+            &lt;p&gt;We use your Personal Information for providing and improving the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Information Collection And Use&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to, your email address, name, phone number, other information ("Personal Information").
+            We collect this information for the purpose of providing the Service, identifying and communicating with you, responding to your requests/inquiries, servicing your purchase orders, and improving our services.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Log Data&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;We may also collect information that your browser sends whenever you visit our Service or when you access the Service by or through a mobile device ("Log Data").&lt;/p&gt;
+            &lt;p&gt;This Log Data may include information such as your computer's Internet Protocol ("IP") address, browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages and other statistics.&lt;/p&gt;
+            &lt;p&gt;When you access the Service by or through a mobile device, this Log Data may include information such as the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use and other statistics.&lt;/p&gt;
+            &lt;p&gt;In addition, we may use third party services such as Google Analytics that collect, monitor and analyze this type of information in order to increase our Service's functionality. These third party service providers have their own privacy policies addressing how they use such information.&lt;/p&gt;
+            &lt;p&gt;Please see the section regarding Location Information below regarding the use of your location information and your options.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Location Information&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;We may use and store information about your location depending on the permissions you have set on your device. We use this information to provide features of our Service, to improve and customize our Service. You can enable or disable location services when you use our Service at anytime, through your mobile device settings.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Cookies&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Cookies are files with a small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a web site and transferred to your device. We use cookies to collect information in order to improve our services for you.&lt;/p&gt;
+            &lt;p&gt;You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. The Help feature on most browsers provide information on how to accept cookies, disable cookies or to notify you when receiving a new cookie.&lt;/p&gt;
+            &lt;p&gt;If you do not accept cookies, you may not be able to use some features of our Service and we recommend that you leave them turned on.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Do Not Track Disclosure&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;We support Do Not Track ("DNT"). Do Not Track is a preference you can set in your web browser to inform websites that you do not want to be tracked.&lt;/p&gt;
+            &lt;p&gt;You can enable or disable Do Not Track by visiting the Preferences or Settings page of your web browser.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Service Providers&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;We may employ third party companies and individuals to facilitate our Service, to provide the Service on our behalf, to perform Service-related services and/or to assist us in analyzing how our Service is used.&lt;/p&gt;
+            &lt;p&gt;These third parties have access to your Personal Information only to perform specific tasks on our behalf and are obligated not to disclose or use your information for any other purpose.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Compliance With Laws&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;We will disclose your Personal Information where required to do so by law or subpoena or if we believe that such action is necessary to comply with the law and the reasonable requests of law enforcement or to protect the security or integrity of our Service.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Business Transaction&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;If PROMERE, LLC is involved in a merger, acquisition or asset sale, your Personal Information may be transferred as a business asset. In such cases, we will provide notice before your Personal Information is transferred and/or becomes subject to a different Privacy Policy.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Security&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;The security of your Personal Information is important to us, and we strive to implement and maintain reasonable, commercially acceptable security procedures and practices appropriate to the nature of the information we store, in order to protect it from unauthorized access, destruction, use, modification, or disclosure.&lt;/p&gt;
+            &lt;p&gt;However, please be aware that no method of transmission over the internet, or method of electronic storage is 100% secure and we are unable to guarantee the absolute security of the Personal Information we have collected from you.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;International Transfer&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Your information, including Personal Information, may be transferred to � and maintained on � computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.&lt;/p&gt;
+            &lt;p&gt;If you are located outside United States and choose to provide information to us, please note that we transfer the information, including Personal Information, to United States and process it there.&lt;/p&gt;
+            &lt;p&gt;Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Links To Other Sites&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.&lt;/p&gt;
+            &lt;p&gt;We have no control over, and assume no responsibility for the content, privacy policies or practices of any third party sites or services.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Children's Privacy&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Only persons age 18 or older have permission to access our Service. Our Service does not address anyone under the age of 13 ("Children").&lt;/p&gt;
+            &lt;p&gt;We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you learn that your Children have provided us with Personal Information, please contact us. If we become aware that we have collected Personal Information from a children under age 13 without verification of parental consent, we take steps to remove that information from our servers.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Changes To This Privacy Policy&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;This Privacy Policy is effective as of September 21, 2016 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.&lt;/p&gt;
+            &lt;p&gt;We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.&lt;/p&gt;
+            &lt;p&gt;If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Contact Us&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;If you have any questions about this Privacy Policy, please contact us.&lt;/p&gt;
+&nbsp;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+/*eslint-enable */
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 16 2017 04:46:09 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

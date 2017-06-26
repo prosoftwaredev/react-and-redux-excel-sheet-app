@@ -1,0 +1,102 @@
+.nav-tabs-horizontal{
+	.nav-tabs{
+		&>li{
+			a{
+				padding: 24px 16px;
+				border: none;
+				border-radius: 0;
+				font-weight: 500;
+				color: $text-color;
+				background: transparent
+			}
+			&.active a,
+			a:hover,
+			a:focus,
+			a:active{
+				border: none;
+				border-bottom: 2px solid $primary;
+				color: $primary;
+			}
+		}
+	}
+}
+
+
+.nav-tabs-vertical{
+	.nav-tabs{
+		min-height: 200px;
+		float: left;
+		border: none;
+		margin-right: 24px;
+		border-right: 1px solid #ddd;
+		&>li{
+			float: none;
+			margin-bottom: 0;
+			margin-right: -2px;
+			a{
+				padding: 8px 16px;
+				border: none;
+				border-right: 2px solid transparent;
+				border-radius: 0;
+				font-weight: 500;
+				color: $text-color;
+				background: transparent
+			}
+			&.active a,
+			a:hover,
+			a:focus,
+			a:active{
+				border: none;
+				border-right: 2px solid $primary;
+				color: $primary;
+			}
+		}
+	}
+}
+
+// accordions
+.accordion .panel-heading {
+	padding: 0;
+	background-color: transparent;
+}
+
+.accordion .panel-body{
+	line-height: 2;
+}
+
+.accordion-toggle{
+	display: block;
+	padding: 24px 16px;
+}
+
+.accordion-toggle,
+.accordion-toggle:focus,
+.accordion-toggle:hover,
+.accordion-toggle:active,{
+	color: $title-color;
+}
+
+.accordion-toggle:after,
+.accordion-toggle:before{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.accordion-toggle .panel-title{
+	float: left;
+}
+
+.accordion-toggle .acc-switch{
+	display: inline-block;
+	font-size: 16px;
+	float: right;
+}
+
+[aria-expanded="true"].accordion-toggle>.acc-switch:before{
+	content: '\f068';
+}
+
+[aria-expanded="false"].accordion-toggle>.acc-switch:before{
+	content: '\f067';
+}

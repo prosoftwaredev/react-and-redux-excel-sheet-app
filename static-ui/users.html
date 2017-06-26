@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LawMap Sample Page</title>
+  <meta name="description" content="Admin, Dashboard, Bootstrap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" sizes="196x196" href="images/logo.png">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="js/libs/bower/font-awesome/css/font-awesome.min.css">
+
+  <!-- Bootstrap select -->
+  <!-- <link rel="stylesheet" href="js/libs/bower/bootstrap-select/dist/css/bootstrap-select.min.css"> -->
+
+  <!-- Bootstrap Table -->
+  <!-- <link rel="stylesheet" href="js/libs/bower/bootstrap-table/dist/bootstrap-table.min.css"> -->
+
+  <!-- build:css ../assets/css/app.min.css -->
+  <link rel="stylesheet" href="js/libs/bower/animate.css/animate.min.css">
+  <link rel="stylesheet" href="css/dashboard/bootstrap.css">
+  <link rel="stylesheet" href="css/dashboard/app.css">
+
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,800,900,300">
+</head>
+<body>
+  <div class="sb-top" id="users-page">
+
+    <!--============= start main area -->
+
+    <!-- APP ASIDE ==========-->
+    <div class="breadcumb blue-dark">
+      <div class="container">
+        <div class="sheet">
+          <a class="dropdown-toggle" type="button" data-toggle="dropdown">Sheet Name
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Sheet Name 1</a></li>
+            <li><a href="#">Sheet Name 2</a></li>
+            <li><a href="#">Sheet Name 3</a></li>
+            <li><a href=""><i class="m-r-md fa fa-plus"></i>Create new sheet</a></li>
+          </ul>
+        </div>
+
+        <div class="litigation">Litigation Name</div>
+      </div>
+    </div>
+    <!--========== END app aside -->
+
+    <!-- APP NAVBAR ==========-->
+    <nav id="app-navbar" class="app-navbar bg-primary in grey">
+      <div class="container">
+        <!-- navbar-header -->
+        <div id="navbar-header" class="pull-left">
+          <div>
+            <a href="sample_page.html" id="app-brand" class="app-brand text-white">
+              <img src="images/logo.png" class="" alt="">
+            </a>
+          </div>
+        </div>
+        <!-- /navbar-header -->
+
+        <!-- navbar nav -->
+        <div>
+          <ul id="top-nav" class="pull-right">
+            <li class="nav-item dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle top-bar-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <div class="avatar avatar-top-bar avatar-circle">
+                  <img class="img-responsive" src="images/avatar/default-user.png" alt="avatar"/>
+                </div>
+                <span>User Name <i class="fa fa-caret-down"></i></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="" data-toggle="modal" data-target="#personalModal"><i class="m-r-md fa fa-user"></i>Personal</a></li>
+                <li><a href="users.html"><i class="m-r-md fa fa-users"></i>Users</a></li>
+                <li><a href="login.html"><i class="m-r-md fa fa-sign-out"></i>Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /navbar-nav -->
+
+        <!-- navbar search -->
+        <div id="navbar-search" class="navbar-search">
+          <form action="#">
+            <span class="search-icon"><i class="fa fa-search"></i></span>
+            <input class="search-field" type="search" placeholder="search..."/>
+          </form>
+          <button id="search-close" class="search-close">
+            <i class="fa fa-close"></i>
+          </button>
+        </div>
+        <!-- /navbar search -->
+      </div>
+    </nav>
+    <!--========== END app navbar -->
+
+    <!-- APP MAIN ==========-->
+    <main id="app-main" class="app-main in">
+      <div class="container">
+
+        <div>
+          <section class="app-content">
+
+            <div class="row">
+              &nbsp;
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 collapsed" id="table-with-filter">
+
+                <div class="filter-sidebar">
+                  <div class="widget">
+                    <header class="widget-header">
+                      <a id="toggle-filter-show"><i class="fa fa-user"></i></a>
+                      <h4 class="widget-title">Groups</h4>
+                    </header>
+                    <hr class="widget-separator"/>
+                    <div class="widget-body">
+                      <div class="sidebar-header-options">
+                        <button class="btn btn-blue-dark btn-block" id="btn-new-record" type="button" data-toggle="modal" data-target="#myModal">New User</button>
+                        <div class="list-group">
+                          <a href="#" class="list-group-item">
+                            <i class="fa fa-users"></i>
+                            <span>All Users</span>
+                            <span class="pull-right">50</span>
+                          </a>
+                        </div>
+                      </div>
+                      <hr class="separator">
+                      <div class="list-group">
+                        <a href="#" class="list-group-item">
+                          <div class="item-data">
+                            <span class="label-text">Administrator</span>
+                            <span class="pull-right">2</span>
+                          </div>
+                        </a><!-- .list-group-item -->
+                        <a href="#" class="list-group-item">
+                          <div class="item-data">
+                            <span class="label-text">Senior Partner</span>
+                            <span class="pull-right">18</span>
+                          </div>
+                        </a><!-- .list-group-item -->
+                        <a href="#" class="list-group-item">
+                          <div class="item-data">
+                            <span class="label-text">Partner</span>
+                            <span class="pull-right">4</span>
+                          </div>
+                        </a><!-- .list-group-item -->
+                        <a href="#" class="list-group-item">
+                          <div class="item-data">
+                            <span class="label-text">Senior Associate</span>
+                            <span class="pull-right">2</span>
+                          </div>
+                        </a><!-- .list-group-item -->
+                        <a href="#" class="list-group-item">
+                          <div class="item-data">
+                            <span class="label-text">Associate</span>
+                            <span class="pull-right">5</span>
+                          </div>
+                        </a><!-- .list-group-item -->
+                        <a href="#" class="list-group-item">
+                          <div class="item-data">
+                            <span class="label-text">Paralegal/Secretary</span>
+                            <span class="pull-right">1</span>
+                          </div>
+                        </a><!-- .list-group-item -->
+                        <a href="#" class="list-group-item">
+                          <div class="item-data">
+                            <span class="label-text">Expert/Witness</span>
+                            <span class="pull-right">3</span>
+                          </div>
+                        </a>
+                        <hr class="separator">
+                        <a href="#" class="list-group-item">
+                          <div class="item-data">
+                            <span class="label-text"><i class="fa fa-plus"></i> Add Group</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget table-widget">
+                  <header class="widget-header">
+                    <h4 class="widget-title">
+                      Users
+                    </h4>
+                  </header>
+                  <hr class="widget-separator"/>
+                  <div class="widget-body">
+                    <div class="table-responsive">
+                      <table data-classes="table table-hover" data-toggle="table" data-icons-prefix="fa" data-striped="true" data-search="true">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th data-sortable="true">Username</th>
+                            <th data-sortable="true">Fullname</th>
+                            <th data-sortable="true">Email</th>
+                            <th data-sortable="true">Groups</th>
+                            <th data-sortable="true">Quota</th>
+                            <th data-sortable="true">Storage Location</th>
+                            <th data-sortable="true">User Backend</th>
+                            <th data-sortable="true">Last login</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="column-image-profile">
+                             <div class="avatar avatar-top-bar avatar-circle">
+                                <img class="img-responsive" src="images/avatar/202.jpg" alt="avatar"/>
+                              </div>
+                            </td>
+                            <td>
+                              LVargas
+                            </td>
+                            <td>Louella Vargas</td>
+                            <td>louella.vargas48@example.com</td>
+                            <td>
+                              Administrator
+                            </td>
+                            <td>
+                              no-group
+                            </td>
+                            <td>/var/ncdata/etc</td>
+                            <td>Database</td>
+                            <td>10 minutes ago</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="m-r-md fa fa-edit"></i>Edit</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-trash"></i>Delete</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-ban"></i>Block</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="column-image-profile">
+                             <div class="avatar avatar-top-bar avatar-circle">
+                                <img class="img-responsive" src="images/avatar/203.jpg" alt="avatar"/>
+                              </div>
+                            </td>
+                            <td>
+                              RSutton
+                            </td>
+                            <td>Renee Sutton</td>
+                            <td>renee.sutton32@example.com</td>
+                            <td>
+                              Administrator, Senior Partner
+                            </td>
+                            <td>
+                              no-group
+                            </td>
+                            <td>/var/ncdata/etc</td>
+                            <td>Database</td>
+                            <td>1 day ago</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="m-r-md fa fa-edit"></i>Edit</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-download"></i>Delete</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-thumb-tack"></i>Block</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="column-image-profile">
+                             <div class="avatar avatar-top-bar avatar-circle">
+                                <img class="img-responsive" src="images/avatar/204.jpg" alt="avatar"/>
+                              </div>
+                            </td>
+                            <td>
+                              MCook
+                            </td>
+                            <td>Marcia Cook</td>
+                            <td>marcia.cook63@example.com</td>
+                            <td>
+                              Administrator, Senior Partner
+                            </td>
+                            <td>
+                              no-group
+                            </td>
+                            <td>/var/ncdata/etc</td>
+                            <td>Database</td>
+                            <td>8 hours ago</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="m-r-md fa fa-edit"></i>Edit</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-trash"></i>Delete</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-ban"></i>Block</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="column-image-profile">
+                             <div class="avatar avatar-top-bar avatar-circle">
+                                <img class="img-responsive" src="images/avatar/205.jpg" alt="avatar"/>
+                              </div>
+                            </td>
+                            <td>
+                              FHarris
+                            </td>
+                            <td>Fernando Harris</td>
+                            <td>fernando.harris28@example.com</td>
+                            <td>
+                              Administrator
+                            </td>
+                            <td>
+                              no-group
+                            </td>
+                            <td>/var/ncdata/etc</td>
+                            <td>Database</td>
+                            <td>2 days ago</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="m-r-md fa fa-edit"></i>Edit</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-trash"></i>Delete</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-ban"></i>Block</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="column-image-profile">
+                             <div class="avatar avatar-top-bar avatar-circle">
+                                <img class="img-responsive" src="images/avatar/206.jpg" alt="avatar"/>
+                              </div>
+                            </td>
+                            <td>
+                              EDavis
+                            </td>
+                            <td>Edgar Davis</td>
+                            <td>edgar.davis62@example.com</td>
+                            <td>
+                              Administrator, Senior Partner
+                            </td>
+                            <td>
+                              no-group
+                            </td>
+                            <td>/var/ncdata/etc</td>
+                            <td>Database</td>
+                            <td>2 days ago</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="m-r-md fa fa-floppy-o"></i>Edit</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-download"></i>Delete</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-thumb-tack"></i>Block</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="column-image-profile">
+                             <div class="avatar avatar-top-bar avatar-circle">
+                                <img class="img-responsive" src="images/avatar/207.jpg" alt="avatar"/>
+                              </div>
+                            </td>
+                            <td>
+                              BKennedy
+                            </td>
+                            <td>Bertha Kennedy</td>
+                            <td>bertha.kennedy29@example.com</td>
+                            <td>
+                              Administrator, Senior Partner
+                            </td>
+                            <td>
+                              no-group
+                            </td>
+                            <td>/var/ncdata/etc</td>
+                            <td>Database</td>
+                            <td>2 days ago</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="m-r-md fa fa-edit"></i>Edit</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-trash"></i>Delete</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-ban"></i>Block</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                            <tr>
+                            <td class="column-image-profile">
+                             <div class="avatar avatar-top-bar avatar-circle">
+                                <img class="img-responsive" src="images/avatar/208.jpg" alt="avatar"/>
+                              </div>
+                            </td>
+                            <td>
+                              SThomas
+                            </td>
+                            <td>Sonia Thomas</td>
+                            <td>sonia.thomas43@example.com</td>
+                            <td>
+                              Administrator, Senior Partner
+                            </td>
+                            <td>
+                              no-group
+                            </td>
+                            <td>/var/ncdata/etc</td>
+                            <td>Database</td>
+                            <td>2 days ago</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="m-r-md fa fa-edit"></i>Edit</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-trash"></i>Delete</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-ban"></i>Block</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div><!-- .widget -->
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <!-- app-footer -->
+          <footer class="app-footer">
+            <div class="row">
+              <div class="col-md-6 text-md-center">
+                <div class="privacy-terms">
+                  <ul>
+                    <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                    <li><a href="javascript:void(0)">Terms of Use</a></li>
+                  </ul>
+                </div>
+                <div class="copyright">Copyright LawMap App 2017 &copy;</div>
+              </div>
+            </div>
+          </footer>
+          <!-- #app-footer -->
+        </div>
+      </div>
+    </main>
+  </div>
+  <!--========== END app -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">
+            Create/Edit User
+          </h4>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form role="form">
+            <div class="row">
+              <div class="form-group text-center col-xs-12 col-sm-12">
+                <label for="exampleInputFile" style="display:block;">Avatar Picture</label>
+                <div class="avatar avatar-xl avatar-circle m-r-0">
+                  <img class="img-responsive" src="images/avatar/default-user.png" alt="avatar">
+                </div><!-- .avatar -->
+                <label class="btn btn-default btn-file btn-block">
+                  <i class="fa fa-upload m-r-sm"></i> Browse <input type="file" style="display: none;">
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">User Name</label>
+                <input type="email" class="form-control input-shadow " id="field-1" placeholder="Enter User Name"/>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Full Name</label>
+                <input type="email" class="form-control input-shadow " id="field-2" placeholder="Enter Full Name"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Email</label>
+                <input type="email" class="form-control input-shadow " id="field-3" placeholder="Enter Email Address"/>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Group</label>
+                <select class="form-control selectpicker">
+                  <option>-- Select Group --</option>
+                  <option>Admnistrator</option>
+                  <option>Partner</option>
+                  <option>Associate</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Quota</label>
+                <select class="selectpicker form-control">
+                  <option>no-group</option>
+                </select>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Storage Location</label>
+                <input type="email" class="form-control" id="field-6" placeholder="Enter Storage Location"/>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-blue-dark">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
+
+  <!-- Personal Modal -->
+  <div class="modal fade" id="personalModal" tabindex="-1" role="dialog" aria-labelledby="personalModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">
+            User Name Profile
+          </h4>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form role="form">
+            <div class="row">
+              <div class="text-center col-xs-12 col-sm-12">
+                <label for="exampleInputFile" style="display:block;">Avatar Picture</label>
+                <div class="avatar avatar-xl avatar-circle m-r-0">
+                  <img class="img-responsive" src="images/avatar/222.jpg" alt="avatar">
+                </div><!-- .avatar -->
+                <label class="btn btn-default btn-file btn-block">
+                  <i class="fa fa-upload m-r-sm"></i> Browse <input type="file" style="display: none;">
+                </label>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                  <label for="field-1">Email</label>
+                  <input type="email" class="form-control input-shadow " id="field-1" placeholder="Enter Email"/>
+                </div>
+                <div class="form-group">
+                  <label for="field-2">First Name</label>
+                  <input type="email" class="form-control input-shadow " id="field-2" placeholder="Enter First Name"/>
+                </div>
+                <div class="form-group">
+                  <label for="field-3">Last Name</label>
+                  <input type="email" class="form-control input-shadow " id="field-3" placeholder="Enter Last Name"/>
+                </div>
+                <div class="form-group">
+                  <label for="field-4">User Level</label>
+                  <input type="email" class="form-control input-shadow " id="field-4" placeholder="Enter User Level"/>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    Level 2
+                  </a>
+                  <a href="#" class="list-group-item"><i class="fa fa-envelope m-r-sm"></i>Send Invite</a>
+                  <a href="#" class="list-group-item"><i class="fa fa-lock m-r-sm"></i>Reset Password</a>
+                  <a href="#" class="list-group-item"><i class="fa fa-ban m-r-sm"></i>Deactive User</a>
+                  <a href="#" class="list-group-item text-danger"><i class="fa fa-trash m-r-sm"></i>Delete User</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-blue-dark">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Personal Modal -->
+
+  <!-- <script src="js/libs/bower/jquery/dist/jquery.js"></script> -->
+  <!-- <script src="js/libs/bower/jquery-ui/jquery-ui.min.js"></script> -->
+  <!-- <script src="js/libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script> -->
+  <!-- <script src="js/libs/bower/PACE/pace.min.js"></script> -->
+  <!-- <script src="js/libs/bower/bootstrap-table/dist/bootstrap-table.min.js"></script> -->
+  <!-- endbuild -->
+
+  <!-- build:js ../assets/js/app.min.js -->
+  <!-- <script src="js/library.js"></script> -->
+  <!-- <script src="js/plugins.js"></script> -->
+  <!-- <script src="js/app.js"></script> -->
+  <!-- endbuild -->
+  <!-- <script src="js/libs/bower/moment/moment.js"></script> -->
+  <!-- Bootstrap select -->
+  <!-- <script src="js/libs/bower/bootstrap-select/dist/js/bootstrap-select.min.js"></script> -->
+
+</body>
+</html>

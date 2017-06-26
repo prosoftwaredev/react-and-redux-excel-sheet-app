@@ -1,0 +1,14 @@
+@import 'libs-settings';
+@import 'PACE/default-theme';
+
+
+//= hamburger lib specific styles
+.hamburger{
+	outline: none;
+	border: none;
+}
+
+//= dropzone lib specific styles
+.dropzone {
+	border: 2px dashed #188ae2;
+}

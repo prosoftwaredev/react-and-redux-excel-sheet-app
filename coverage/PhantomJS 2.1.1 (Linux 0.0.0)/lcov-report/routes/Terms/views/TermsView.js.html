@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for routes/Terms/views/TermsView.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">routes/Terms/views/</a> TermsView.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import Logo from 'images/logo.png'
+&nbsp;
+/*eslint-disable */
+export default () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;div className='simple-page simple-page-pad' style={{ padding: '40px' }}&gt;
+      &lt;div style={{textAlign: 'center', paddingBottom: '40px'}}&gt;
+        &lt;img src={Logo} className='' alt='' style={{height: '50px'}} /&gt;
+      &lt;/div&gt;
+      &lt;div className='container wrapper-h-xs-lg reveal-bottom-opacity' data-sr-id='1'
+        style={{
+          visibility: 'visible',
+          opacity: 1,
+          transform: 'translateY(0)',
+          opacity: 1,
+          transition: 'transform 0.8s linear 0s, opacity 0.8s linear 0s'
+        }}&gt;
+        &lt;div className='row'&gt;
+          &lt;div className='col-md-8 col-md-offset-2 wrapper-v-lg panel-terms'
+            style={{background: 'white'}}&gt;
+            &lt;h2&gt;Terms and Conditions ('Terms')&lt;/h2&gt;
+            &lt;p&gt;Last updated: September 21, 2016&lt;/p&gt;
+            &lt;p&gt;Please read these Terms and Conditions ('Terms', 'Terms and Conditions') carefully before using the PROMERE mobile application (the 'Service') operated by PROMERE, LLC ('us', 'we', or 'our').&lt;/p&gt;
+            &lt;p&gt;Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who wish to access or use the Service.&lt;/p&gt;
+            &lt;p&gt;By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you do not have permission to access the Service.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Subscriptions&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Some parts of the Service are billed on a subscription basis ('Subscription(s)'). You will be billed in advance on a recurring and periodic basis ('Billing Cycle'). Billing cycles are set either on a monthly or annual basis, depending on the type of subscription plan you select when purchasing a Subscription.&lt;/p&gt;
+            &lt;p&gt;At the end of each Billing Cycle, your Subscription will automatically renew under the exact same conditions unless you cancel it or PROMERE, LLC cancels it. You may cancel your Subscription renewal either through your online account management page or by contacting PROMERE, LLC customer support team.&lt;/p&gt;
+            &lt;p&gt;A valid payment method, including PayPal, is required to process the payment for your Subscription. You shall provide PROMERE, LLC with accurate and complete billing information including full name, address, state, zip code, telephone number, and a valid payment method information. By submitting such payment information, you automatically authorize PROMERE, LLC to charge all Subscription fees incurred through your account to any such payment instruments.&lt;/p&gt;
+            &lt;p&gt;Should automatic billing fail to occur for any reason, PROMERE, LLC will issue an electronic invoice indicating that you must proceed manually, within a certain deadline date, with the full payment corresponding to the billing period as indicated on the invoice.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Fee Changes&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;PROMERE, LLC, in its sole discretion and at any time, may modify the Subscription fees for the Subscriptions. Any Subscription fee change will become effective at the end of the then-current Billing Cycle.&lt;/p&gt;
+            &lt;p&gt;PROMERE, LLC will provide you with a reasonable prior notice of any change in Subscription fees to give you an opportunity to terminate your Subscription before such change becomes effective.&lt;/p&gt;
+            &lt;p&gt;Your continued use of the Service after the Subscription fee change comes into effect constitutes your agreement to pay the modified Subscription fee amount.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Refunds&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Except when required by law, paid Subscription fees are non-refundable.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Accounts&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;When you create an account with us, you guarantee that you are above the age of 18, and that the information you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on the Service.&lt;/p&gt;
+            &lt;p&gt;You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account. You agree to accept responsibility for any and all activities or actions that occur under your account and/or password, whether your password is with our Service or a third-party service. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Intellectual Property&lt;/strong&gt;
+            The Service and its original content, features and functionality are and will remain the exclusive property of PROMERE, LLC and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of PROMERE, LLC.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Links To Other Web Sites&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Our Service may contain links to third party web sites or services that are not owned or controlled by PROMERE, LLC.&lt;/p&gt;
+            &lt;p&gt;PROMERE, LLC has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.&lt;/p&gt;
+            &lt;p&gt;You acknowledge and agree that PROMERE, LLC shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such third party web sites or services.&lt;/p&gt;
+            &lt;p&gt;We strongly advise you to read the terms and conditions and privacy policies of any third party web sites or services that you visit.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Termination&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;We may terminate or suspend your account and bar access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.&lt;/p&gt;
+            &lt;p&gt;If you wish to terminate your account, you may simply discontinue using the Service.&lt;/p&gt;
+            &lt;p&gt;All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Indemnification&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;You agree to defend, indemnify and hold harmless PROMERE, LLC and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of a) your use and access of the Service, by you or any person using your account and password, or b) a breach of these Terms.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Limitation Of Liability&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;In no event shall PROMERE, LLC, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Your use of the Service is at your sole risk. The Service is provided on an 'AS IS' and 'AS AVAILABLE' basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.&lt;/p&gt;
+            &lt;p&gt;PROMERE, LLC its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Exclusions&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Some jurisdictions do not allow the exclusion of certain warranties or the exclusion or limitation of liability for consequential or incidental damages, so the limitations above may not apply to you.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Governing Law&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;These Terms shall be governed and construed in accordance with the laws of California, United States, without regard to its conflict of law provisions.&lt;/p&gt;
+            &lt;p&gt;Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Changes&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.&lt;/p&gt;
+            &lt;p&gt;By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Service.&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Contact Us&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;If you have any questions about these Terms, please contact us.&lt;/p&gt;
+&nbsp;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+/*eslint-enable */
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 16 2017 04:46:09 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

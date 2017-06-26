@@ -1,0 +1,12 @@
+//= tinymce plugin
+body.mce-fullscreen {
+  #dash-navbar{
+    z-index: 999;
+  }
+}
+.mce-fullscreen{
+  z-index: 1100 !important;
+}
+.mce-panel{
+  border-color: #EDF0F5!important;
+}

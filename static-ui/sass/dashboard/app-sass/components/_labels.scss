@@ -1,0 +1,27 @@
+.label-primary{
+	@include label-variant($primary);
+}
+.label-info{
+	@include label-variant($info);
+}
+.label-success{
+	@include label-variant($success);
+}
+.label-warning{
+	@include label-variant($warning);
+}
+.label-danger{
+	@include label-variant($danger);
+}
+.label-pink{
+	@include label-variant($pink);
+}
+.label-purple{
+	@include label-variant($purple);
+}
+.label-inverse{
+	@include label-variant($inverse);
+}
+.label-dark{
+	@include label-variant($dark);
+}

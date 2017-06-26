@@ -1,0 +1,19 @@
+$sidebar-lg-screen: 20%;
+
+@media (min-width: $screen-lg) {
+  #dash-sidebar{
+    width: $sidebar-lg-screen;
+  }
+
+  #navbar-header{
+    width: $sidebar-lg-screen;
+  }
+
+  #navbar-collapse{
+    margin-left: $sidebar-lg-screen;
+  }
+
+  #dash-wrap{
+    margin-left: $sidebar-lg-screen;
+  }
+}

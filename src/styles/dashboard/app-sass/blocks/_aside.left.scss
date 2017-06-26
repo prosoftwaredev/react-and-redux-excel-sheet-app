@@ -1,0 +1,209 @@
+/**========= DASHBOARD SIDEBAR ===========**/
+.app-brand{
+  .brand-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: .5rem;
+    text-align: center;
+    transition: margin-right .5s ease;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+.app-aside{
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 1s;
+  &.in{
+    opacity: 1;
+  }
+}
+
+.app-aside.left{
+  width: $sidebar-width;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.foldable{
+  display: inline-block;
+  visibility: visible;
+}
+
+.aside-header{
+  height: $navbar-height;
+  padding: 1rem;
+}
+
+.aside-user{
+  padding: 24px 16px;
+  .media,
+  .media-body{
+    overflow: visible;
+  }
+  .dropdown-menu {
+    left: 0;
+  }
+}
+
+// aside-left-menu
+.aside-left-menu{
+  .menu-link {
+    position: relative;
+    display: block;
+    padding: 13px 1rem;
+    font-size: .875rem;
+    font-weight: $weight-medium;
+  }
+  .menu-icon {
+    display: inline-block;
+    width: 1rem;
+    margin-right: .5rem;
+    transition: margin-right .5s ease;
+  }
+  .menu-text {
+    line-height: 1.125rem;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .menu-caret {
+    float: right;
+    font-size: 1.2em;
+    backface-visibility: hidden;
+    transition: transform .3s ease-in-out;
+  }
+
+  .open .menu-caret {
+    transform: rotate(90deg);
+  }
+
+  .has-submenu {
+    position: relative;
+  }
+
+  .submenu {
+    display: none;
+    box-shadow: none;
+    &>li>a{
+      display: block;
+      padding: 10px 24px 10px 45px;
+      font-size: .875rem;
+      font-weight: $weight-medium;
+      text-transform: capitalize;
+    }
+    .menu-label {
+      float: right;
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .app-aside.left.folded{
+    width: $sb-folded-width;
+    .foldable {
+      visibility: hidden;
+      display: none;
+    }
+    .brand-icon {
+      width: 100%;
+      margin-right: 0;
+    }
+    .menu-icon {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+    }
+    .menu-link .md-icon {
+      font-size: 20px;
+    }
+    .submenu {
+      position: absolute;
+      left: 100%;
+      right: auto;
+      top: 0;
+      max-height: auto;
+      display: none;
+      min-width: $sidebar-width;
+      @include box-shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+      &>li>a {
+        padding-left: 24px;
+      }
+    }
+    .open > .submenu {
+      display: block;
+    }
+  }
+}
+
+.aside-scroll{
+  position: relative;
+  height: 75%;
+  .ps-scrollbar-y-rail{
+    width: 4px !important;
+    background: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+  }
+  .ps-scrollbar-y{
+    background: #000 !important;
+    width: 4px !important;
+  }
+  .ps-scrollbar-x-rail {
+    visibility: hidden;
+  }
+}
+
+body.sb-left{
+  .app-main {
+    margin-left: 220px;
+  }
+  .app-navbar {
+    left: 220px;
+  }
+
+  &.sb-folded{
+    .app-main {
+      margin-left: 5rem;
+    }
+    .app-navbar {
+      left: 5rem;
+    }
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .aside-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 8888;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .app-aside.left {
+    left: - ($sidebar-width + 2);
+    width: $sidebar-width !important;
+    transition: left .5s ease-in-out;
+    z-index: 9999;
+    &.open {
+      left: 0;
+    }
+  }
+
+  body.sb-left{
+    .app-navbar {
+      left: 0 !important;
+    }
+    .app-main {
+      margin-left: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,170 @@
+body.theme-primary{
+	.app-brand{
+		color: $primary;
+	}
+	.theme-color{
+		color: $primary;
+	}
+	.app-aside{
+		.aside-menu {
+			.open > a,
+			a:hover,
+			a:focus,
+			a:active{
+				color: $primary;
+			}
+		}
+	}
+}
+
+body.theme-info{
+	.app-brand{
+		color: $info;
+	}
+	.theme-color{
+		color: $info;
+	}
+	.app-aside{
+		.aside-menu {
+			.open > a,
+			a:hover,
+			a:focus,
+			a:active{
+				color: $info;
+			}
+		}
+	}
+}
+
+body.theme-success{
+	.app-brand{
+		color: $success;
+	}
+	.theme-color{
+		color: $success;
+	}
+	.app-aside{
+		.aside-menu {
+			.open > a,
+			a:hover,
+			a:focus,
+			a:active{
+				color: $success;
+			}
+		}
+	}
+}
+
+body.theme-warning{
+	.app-brand{
+		color: $warning;
+	}
+	.theme-color{
+		color: $warning;
+	}
+	.app-aside{
+		.aside-menu {
+			.open > a,
+			a:hover,
+			a:focus,
+			a:active{
+				color: $warning;
+			}
+		}
+	}
+}
+
+body.theme-danger{
+	.app-brand{
+		color: $danger;
+	}
+	.theme-color{
+		color: $danger;
+	}
+	.app-aside{
+		.aside-menu {
+			.open > a,
+			a:hover,
+			a:focus,
+			a:active{
+				color: $danger;
+			}
+		}
+	}
+}
+
+body.theme-pink{
+	.app-brand{
+		color: $pink;
+	}
+	.theme-color{
+		color: $pink;
+	}
+	.app-aside{
+		.aside-menu {
+			.open > a,
+			a:hover,
+			a:focus,
+			a:active{
+				color: $pink;
+			}
+		}
+	}
+}
+
+body.theme-purple{
+	.app-brand{
+		color: $purple;
+	}
+	.theme-color{
+		color: $purple;
+	}
+	.app-aside{
+		.aside-menu {
+			.open > a,
+			a:hover,
+			a:focus,
+			a:active{
+				color: $purple;
+			}
+		}
+	}
+}
+
+body.theme-inverse{
+	.app-brand{
+		color: $inverse;
+	}
+	.theme-color{
+		color: $inverse;
+	}
+	.app-aside{
+		.aside-menu {
+			.open > a,
+			a:hover,
+			a:focus,
+			a:active{
+				color: $info;
+			}
+		}
+	}
+}
+
+body.theme-dark{
+	.app-brand{
+		color: $dark;
+	}
+	.theme-color{
+		color: $dark;
+	}
+	.app-aside{
+		.aside-menu {
+			.open > a,
+			a:hover,
+			a:focus,
+			a:active{
+				color: $info;
+			}
+		}
+	}
+}

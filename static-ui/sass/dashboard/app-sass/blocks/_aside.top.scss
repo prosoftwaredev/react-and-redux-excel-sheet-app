@@ -1,0 +1,272 @@
+.app-aside.top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: $navbar-height;
+  height: $sidebar-height;
+  .aside-user {
+    position: relative;
+    float: right;
+    display: inline-block;
+    padding: 0;
+    .dropdown {
+      display: table-cell;
+      vertical-align: middle;
+      height: $sidebar-height;
+    }
+    .dropdown-menu {
+      top: 100%;
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+/* aside-top-menu */
+@media (min-width: $screen-sm-min){
+  .aside-top-menu{
+    li{
+      position: relative;
+    }
+    ul {
+      position: absolute;
+      right: auto;
+      display: none;
+      min-width: 200px;
+    }
+    a {
+      display: block;
+      position: relative;
+      font-size: 1em;
+      font-weight: 500;
+    }
+    li:hover > ul,
+    li.sfHover > ul{
+      display: block;
+    }
+    &>li {
+      float: left;
+      display: inline-block;
+    }
+    .menu-link {
+      height: $sidebar-height;
+      padding: 18px 16px 12px;
+      text-align: center;
+    }
+    .menu-icon {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .menu-text {
+      display: block;
+      font-size: 12px;
+    }
+    .menu-caret {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 18px;
+      float: right;
+    }
+    .menu-badge {
+      display: inline-block;
+      margin-left: 5px;
+      float: right;
+    }
+    &>li>ul {
+      left: 0;
+      top: 100%;
+    }
+    ul ul {
+      top: 0;
+      left: 100%;
+    }
+    
+    ul a {
+      padding: 10px 24px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .aside-menu-wrapper{
+    display: inline-block;
+    position: fixed;
+    top: $navbar-height;
+  }
+  #aside-top-menu-toggle{
+    line-height: $sidebar-height;
+  }
+
+  .app-aside.top.light{
+    .aside-top-menu{
+      background: #fff;
+      @include box-shadow(0 0 1px #aaa);
+    }
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after{
+      background-color: $text-color;
+    }
+  }
+  .app-aside.top.dark{
+    .aside-top-menu{
+      background: $inverse;
+    }
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after{
+      background-color: #fff;
+    }
+  } 
+  .aside-top-menu{
+    // display: inline-block;
+    position: fixed;
+    width: 220px;
+    top: $navbar-height + $sidebar-height;
+    left: -222px;
+    transition: left .5s ease;
+    bottom: 0;
+    &.open{
+      left: 0;
+    }
+    li{
+      position: relative;
+    }
+    ul {
+      position: absolute;
+      right: auto;
+      left: 100%;
+      top: 0;
+      display: none;
+      min-width: 200px;
+    }
+    a {
+      display: block;
+      position: relative;
+      font-size: 1em;
+      font-weight: 500;
+    }
+    li:hover > ul,
+    li.sfHover > ul{
+      display: block;
+    }
+    &>li {
+      display: block;
+      position: relative;
+      float: none;
+    }
+    .menu-link { 
+      padding: 13px 16px;
+    }
+    .menu-icon {
+      display: inline-block;
+      font-size: 16px;
+      margin-right: 12px;
+    }
+    .menu-text {
+      display: inline-block;
+      font-size: 12px;
+    }
+    .menu-caret {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 18px;
+      float: right;
+    }
+    .menu-badge {
+      display: inline-block;
+      margin-left: 5px;
+      float: right;
+    }
+    ul a {
+      padding: 10px 24px;
+    }
+  }
+}
+div.sb-top{
+  .app-main {
+    margin-top: $navbar-height + $sidebar-height;
+  }
+  .side-panel {
+    top: $navbar-height + $sidebar-height;
+  }
+}
+
+// aside theme
+.app-aside.left.light{
+  @include box-shadow(0 0 1px #aaa); 
+}
+
+.app-aside.top.light{
+  @include box-shadow(0 2px 4px #ccc);
+  ul ul{
+    @include box-shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+  }
+}
+
+// light theme
+.app-aside.light{
+  background: #fff;
+  .aside-user{
+    .username {
+      color: #333333;
+    }
+    .usertitle {
+      color: $text-color;
+    }
+  }
+  .aside-menu{
+    a {
+      color: $text-color;
+    }
+    .open > a,
+    a:hover,
+    a:focus,
+    a:active{
+      background: $body-bg;
+    }
+    ul {
+      background: #fff;
+      a {
+        background: darken(#fff, 2%);
+      }
+    }
+  }
+}
+
+// dark theme
+.app-aside.dark{
+  background: $inverse;
+  .app-brand {
+    color: #fff;
+  }
+  .aside-user{
+    .username {
+      color: #fff;
+    }
+    .usertitle {
+      color: #eee;
+    }
+  }
+  .aside-menu{
+    a {
+      color: $text-white;
+    }
+    .open > a,
+    a:hover,
+    a:focus,
+    a:active{
+      background: darken($inverse, 5%);
+    }
+    ul {
+      background: $inverse;
+      a {
+        background: darken($inverse, 2%);
+      }
+    }
+  }
+  hr {
+    border-color: #777;
+  }
+}

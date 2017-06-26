@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LawMap Sample Page</title>
+  <meta name="description" content="Admin, Dashboard, Bootstrap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" sizes="196x196" href="images/logo.png">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="js/libs/bower/font-awesome/css/font-awesome.min.css">
+
+  <!-- Bootstrap Table -->
+  <link rel="stylesheet" href="js/libs/bower/bootstrap-table/dist/bootstrap-table.min.css">
+
+  <!-- build:css ../assets/css/app.min.css -->
+  <link rel="stylesheet" href="js/libs/bower/animate.css/animate.min.css">
+  <link rel="stylesheet" href="css/dashboard/bootstrap.css">
+  <link rel="stylesheet" href="css/dashboard/app.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,800,900,300">
+</head>
+<body>
+  <div class="sb-top">
+
+    <!--============= start main area -->
+
+    <!-- APP ASIDE ==========-->
+    <div class="breadcumb blue-dark">
+      <div class="container">
+        <div class="sheet">
+          <a class="dropdown-toggle" type="button" data-toggle="dropdown">Sheet Name
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Sheet Name 1</a></li>
+            <li><a href="#">Sheet Name 2</a></li>
+            <li><a href="#">Sheet Name 3</a></li>
+            <li><a href=""><i class="m-r-md fa fa-plus"></i>Create new sheet</a></li>
+          </ul>
+        </div>
+
+        <div class="litigation">Litigation Name</div>
+      </div>
+    </div>
+    <!--========== END app aside -->
+
+    <!-- APP NAVBAR ==========-->
+    <nav id="app-navbar" class="app-navbar bg-primary in grey">
+      <div class="container">
+        <!-- navbar-header -->
+        <div id="navbar-header" class="pull-left">
+          <div>
+            <a href="sample_page.html" id="app-brand" class="app-brand text-white">
+              <img src="images/logo.png" class="" alt="">
+            </a>
+          </div>
+        </div>
+        <!-- /navbar-header -->
+
+        <!-- navbar nav -->
+        <div>
+          <ul id="top-nav" class="pull-right">
+            <li class="nav-item dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle top-bar-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <div class="avatar avatar-top-bar avatar-circle">
+                  <img class="img-responsive" src="images/avatar/default-user.png" alt="avatar"/>
+                </div>
+                <span>User Name <i class="fa fa-caret-down"></i></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="" data-toggle="modal" data-target="#personalModal"><i class="m-r-md fa fa-user"></i>Personal</a></li>
+                <li><a href="users.html"><i class="m-r-md fa fa-users"></i>Users</a></li>
+                <li><a href="login.html"><i class="m-r-md fa fa-sign-out"></i>Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /navbar-nav -->
+
+        <!-- navbar search -->
+        <div id="navbar-search" class="navbar-search">
+          <form action="#">
+            <span class="search-icon"><i class="fa fa-search"></i></span>
+            <input class="search-field" type="search" placeholder="search..."/>
+          </form>
+          <button id="search-close" class="search-close">
+            <i class="fa fa-close"></i>
+          </button>
+        </div>
+        <!-- /navbar search -->
+      </div>
+    </nav>
+    <!--========== END app navbar -->
+
+    <!-- APP MAIN ==========-->
+    <main id="app-main" class="app-main">
+      <div class="container">
+
+        <div>
+          <section class="app-content">
+
+            <div class="row">
+              <div class="col-md-3 col-sm-3">
+                <button class="btn btn-blue-dark btn-md btn-block" id="btn-new-record" type="button" data-toggle="modal" data-target="#myModal">New Record</button>
+              </div>
+              <div class="col-md-9 col-sm-9">
+                <div class="input-group">
+                  <input type="text" class="form-control search-field" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default btn-search-field" type="button"><i class="fa fa-search"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              &nbsp;
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 collapsed" id="table-with-filter">
+
+                <div class="filter-sidebar">
+                  <div class="widget">
+                    <header class="widget-header">
+                      <a id="toggle-filter-show"><i class="fa fa-filter"></i></a>
+                      <h4 class="widget-title">Filters</h4>
+                    </header>
+                    <hr class="widget-separator"/>
+                    <div class="widget-body">
+                      <div>
+                        <h4 data-toggle="collapse" data-target="#group-1">
+                          <i class="fa fa-fw fa-caret-down parent-expanded"></i>
+                          <i class="fa fa-fw fa-caret-right parent-collapsed"></i>
+                          Fields
+                        </h4>
+                        <div id="group-1" class="list-group collapse in">
+                          <a class="list-group-item" href="#">
+                            <h4 data-toggle="collapse" data-target="#group-2">
+                              <i class="fa fa-fw fa-caret-down parent-expanded"></i>
+                              <i class="fa fa-fw fa-caret-right parent-collapsed"></i>
+                              Country
+                            </h4>
+                            <div id="group-2" class="list-group collapse in" style="margin-left: 20px;">
+                              <a class="list-group-item" href="#">
+                                Brazil (<span>2</span>)
+                              </a>
+                              <a class="list-group-item" href="#">
+                                USA (<span>1</span>)
+                              </a>
+                              <a class="list-group-item" href="#">
+                                Spain (<span>1</span>)
+                              </a>
+                              <a class="list-group-item" href="#">
+                                Italy (<span>1</span>)
+                              </a>
+                              <a class="list-group-item" href="#">
+                                Argentina (<span>1</span>)
+                              </a>
+                            </div>
+                          </a>
+                          <a class="list-group-item" href="#">
+                            <h4 data-toggle="collapse" data-target="#group-3">
+                              <i class="fa fa-fw fa-caret-down parent-expanded"></i>
+                              <i class="fa fa-fw fa-caret-right parent-collapsed"></i>
+                              State
+                            </h4>
+                            <div id="group-3" class="list-group collapse in" style="margin-left: 20px;">
+                              <a class="list-group-item" href="#">
+                                Value 2 (<span>123</span>)
+                              </a>
+                              <a class="list-group-item" href="#">
+                                Value 3 (<span>123</span>)
+                              </a>
+                              <a class="list-group-item" href="#">
+                                Value 4 (<span>123</span>)
+                              </a>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget table-widget">
+                  <header class="widget-header">
+                    <h4 class="widget-title">
+                      Table List
+                    </h4>
+                  </header>
+                  <hr class="widget-separator"/>
+                  <div class="widget-body">
+                    <div class="table-responsive">
+                      <table class="table" id="table-sample-page" data-toggle="table" data-icons-prefix="fa" data-striped="true" data-search="true">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th data-sortable="true">Country</th>
+                            <th data-sortable="true">State</th>
+                            <th data-sortable="true">Longer String Field</th>
+                            <th data-sortable="true">Field4</th>
+                            <th data-sortable="true">Field5</th>
+                            <th data-sortable="true">Field6</th>
+                            <th data-sortable="true">Field7</th>
+                            <th data-sortable="true">Field8</th>
+                            <th data-sortable="true">Field9</th>
+                            <th data-sortable="true">Field10</th>
+                            <th data-sortable="true">Field11</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="clickable collapsed column-collapse" data-toggle="collapse" id="1" data-target="#collapsed1">
+                            <td>
+                              <i class="m-r-md fa fa-caret-right"></i>
+                              <i class="m-r-md fa fa-caret-down"></i>
+                            </td>
+                            <td>
+                              Brazil
+                            </td>
+                            <td>Parana</td>
+                            <td>This is a large string field</td>
+                            <td>Field4</td>
+                            <td>Field5</td>
+                            <td>Field6</td>
+                            <td>Field7</td>
+                            <td>Field8</td>
+                            <td>Field9</td>
+                            <td>Field10</td>
+                            <td>Field11</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#"><i class="m-r-md fa fa-floppy-o"></i>Save</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-download"></i>Export</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-thumb-tack"></i>Pin</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-comment"></i>Comment</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-share-alt"></i>Share</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="collapse" id="collapsed1">
+                            <td>&nbsp;</td>
+                            <td>hidden row 1</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr class="clickable collapsed column-collapse" data-toggle="collapse" id="2" data-target="#collapsed2">
+                            <td>
+                              <i class="m-r-md fa fa-caret-right"></i>
+                              <i class="m-r-md fa fa-caret-down"></i>
+                            </td>
+                            <td>
+                              Brazil
+                            </td>
+                            <td>São Paulo</td>
+                            <td>This is a very, very large string field</td>
+                            <td>Field4</td>
+                            <td>Field5</td>
+                            <td>Field6</td>
+                            <td>Field7</td>
+                            <td>Field8</td>
+                            <td>Field9</td>
+                            <td>Field10</td>
+                            <td>Field11</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#"><i class="m-r-md fa fa-floppy-o"></i>Save</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-download"></i>Export</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-thumb-tack"></i>Pin</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-comment"></i>Comment</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-share-alt"></i>Share</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="collapse" id="collapsed2">
+                            <td>&nbsp;</td>
+                            <td>hidden row 2</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr class="clickable collapsed column-collapse" data-toggle="collapse" id="3" data-target="#collapsed3">
+                            <td>
+                              <i class="m-r-md fa fa-caret-right"></i>
+                              <i class="m-r-md fa fa-caret-down"></i>
+                            </td>
+                            <td>
+                              USA
+                            </td>
+                            <td>Field2</td>
+                            <td>Field3</td>
+                            <td>Field4</td>
+                            <td>Field5</td>
+                            <td>Field6</td>
+                            <td>Field7</td>
+                            <td>Field8</td>
+                            <td>Field9</td>
+                            <td>Field10</td>
+                            <td>Field11</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#"><i class="m-r-md fa fa-floppy-o"></i>Save</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-download"></i>Export</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-thumb-tack"></i>Pin</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-comment"></i>Comment</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-share-alt"></i>Share</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="collapse" id="collapsed3">
+                            <td>&nbsp;</td>
+                            <td>hidden row 3</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr class="clickable collapsed column-collapse" data-toggle="collapse" id="4" data-target="#collapsed4">
+                            <td>
+                              <i class="m-r-md fa fa-caret-right"></i>
+                              <i class="m-r-md fa fa-caret-down"></i>
+                            </td>
+                            <td>
+                              Spain
+                            </td>
+                            <td>Field2</td>
+                            <td>Field3</td>
+                            <td>Field4</td>
+                            <td>Field5</td>
+                            <td>Field6</td>
+                            <td>Field7</td>
+                            <td>Field8</td>
+                            <td>Field9</td>
+                            <td>Field10</td>
+                            <td>Field11</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#"><i class="m-r-md fa fa-floppy-o"></i>Save</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-download"></i>Export</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-thumb-tack"></i>Pin</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-comment"></i>Comment</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-share-alt"></i>Share</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="collapse" id="collapsed4">
+                            <td>&nbsp;</td>
+                            <td>hidden row 4</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr class="clickable collapsed column-collapse" data-toggle="collapse" id="5" data-target="#collapsed5">
+                            <td>
+                              <i class="m-r-md fa fa-caret-right"></i>
+                              <i class="m-r-md fa fa-caret-down"></i>
+                            </td>
+                            <td>
+                              Italy
+                            </td>
+                            <td>Field2</td>
+                            <td>Field3</td>
+                            <td>Field4</td>
+                            <td>Field5</td>
+                            <td>Field6</td>
+                            <td>Field7</td>
+                            <td>Field8</td>
+                            <td>Field9</td>
+                            <td>Field10</td>
+                            <td>Field11</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#"><i class="m-r-md fa fa-floppy-o"></i>Save</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-download"></i>Export</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-thumb-tack"></i>Pin</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-comment"></i>Comment</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-share-alt"></i>Share</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="collapse" id="collapsed5">
+                            <td>&nbsp;</td>
+                            <td>hidden row 5</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr class="clickable collapsed column-collapse" data-toggle="collapse" id="6" data-target="#collapsed6">
+                            <td>
+                              <i class="m-r-md fa fa-caret-right"></i>
+                              <i class="m-r-md fa fa-caret-down"></i>
+                            </td>
+                            <td>
+                              Argentina
+                            </td>
+                            <td>Field2</td>
+                            <td>Field3</td>
+                            <td>Field4</td>
+                            <td>Field5</td>
+                            <td>Field6</td>
+                            <td>Field7</td>
+                            <td>Field8</td>
+                            <td>Field9</td>
+                            <td>Field10</td>
+                            <td>Field11</td>
+                            <td class="text-right">
+                              <div class="btn-group table-actions">
+                                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                  <li><a href="#"><i class="m-r-md fa fa-floppy-o"></i>Save</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-download"></i>Export</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-thumb-tack"></i>Pin</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-comment"></i>Comment</a></li>
+                                  <li><a href="#"><i class="m-r-md fa fa-share-alt"></i>Share</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="collapse" id="collapsed6">
+                            <td>&nbsp;</td>
+                            <td>hidden row 6</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div><!-- .widget -->
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <!-- app-footer -->
+          <footer class="app-footer">
+            <div class="row">
+              <div class="col-md-6 text-md-center">
+                <div class="privacy-terms">
+                  <ul>
+                    <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                    <li><a href="javascript:void(0)">Terms of Use</a></li>
+                  </ul>
+                </div>
+                <div class="copyright">Copyright LawMap App 2017 &copy;</div>
+              </div>
+            </div>
+          </footer>
+          <!-- #app-footer -->
+        </div>
+      </div>
+    </main>
+  </div>
+  <!--========== END app -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">
+            Create Record
+          </h4>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form role="form">
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Field 1</label>
+                <input type="email" class="form-control input-shadow " id="field-1" placeholder="Enter Field 1"/>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Field 2</label>
+                <input type="email" class="form-control input-shadow " id="field-2" placeholder="Enter Field 2"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Field 3</label>
+                <input type="email" class="form-control input-shadow " id="field-3" placeholder="Enter Field 3"/>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Field 4</label>
+                <input type="email" class="form-control input-shadow " id="field-4" placeholder="Enter Field 4"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Field 5</label>
+                <input type="email" class="form-control" id="field-5" placeholder="Enter Field 5"/>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Field 6</label>
+                <input type="email" class="form-control" id="field-6" placeholder="Enter Field 6"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Field 7</label>
+                <input type="email" class="form-control input-shadow " id="field-7" placeholder="Enter Field 7"/>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">Field 8</label>
+                <input type="email" class="form-control input-shadow " id="field-8" placeholder="Enter Field 8"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label>
+                  <input type="checkbox"/> Exhibit
+                </label>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label class="upload"><i class="fa fa-upload"></i><span> Upload Document(s)</span></label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-blue-dark">Add Record</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End modal -->
+
+  <!-- Personal Modal -->
+  <div class="modal fade" id="personalModal" tabindex="-1" role="dialog" aria-labelledby="personalModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">
+            Personal Modal
+          </h4>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form role="form">
+            <div class="row">
+              <div class="form-group text-center col-xs-12 col-sm-12">
+                <label for="exampleInputFile" style="display:block;">Avatar Picture</label>
+                <div class="avatar avatar-xl avatar-circle">
+                  <img class="img-responsive" src="images/avatar/default-user.png" alt="avatar">
+                </div><!-- .avatar -->
+                <input type="file" id="exampleInputFile" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-1">User Name</label>
+                <input type="email" class="form-control input-shadow " id="field-1" placeholder="Enter User Name"/>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-2">Full Name</label>
+                <input type="email" class="form-control input-shadow " id="field-2" placeholder="Enter Full Name"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-3">Email</label>
+                <input type="email" class="form-control input-shadow " id="field-3" placeholder="Enter Email Address"/>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="field-4">Phone Nuber</label>
+                <input type="email" class="form-control input-shadow " id="field-4" placeholder="Enter Phone Number"/>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-blue-dark">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Personal Modal -->
+
+  <script src="js/libs/bower/jquery/dist/jquery.js"></script>
+  <script src="js/libs/bower/jquery-ui/jquery-ui.min.js"></script>
+  <script src="js/libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+  <script src="js/libs/bower/PACE/pace.min.js"></script>
+  <script src="js/libs/bower/bootstrap-table/dist/bootstrap-table.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js ../assets/js/app.min.js -->
+  <script src="js/library.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/app.js"></script>
+  <!-- endbuild -->
+  <script src="js/libs/bower/moment/moment.js"></script>
+
+</body>
+</html>

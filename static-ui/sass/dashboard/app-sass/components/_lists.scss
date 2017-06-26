@@ -1,0 +1,124 @@
+// List groups
+@include list-group-item-variant(primary, $primary, #fff);
+@include list-group-item-variant(info, $info, #fff);
+@include list-group-item-variant(success, $success, #fff);
+@include list-group-item-variant(warning, $warning, #fff);
+@include list-group-item-variant(danger, $danger, #fff);
+@include list-group-item-variant(pink, $pink, #fff);
+@include list-group-item-variant(purple, $purple, #fff);
+@include list-group-item-variant(inverse, $inverse, #fff);
+@include list-group-item-variant(dark, $dark, #fff);
+
+.list-group.no-border{
+	.list-group-item{
+		padding: 10px 16px;
+		border: none;
+		margin: 0;
+		background: transparent;
+		&.active{
+			color: $primary
+		}
+		&.disabled{
+			color: #ddd;
+		}
+	}
+}
+
+.list-group-item{
+	padding: $padding-sm $padding-md;
+}
+// Media Groups
+.media-group{
+	
+}
+
+.media-group-item{
+	position: relative;
+	display: block;
+	padding: 8px 16px;
+	background-color: #fff;
+	border-bottom: 1px solid #f5f7f9;
+	&:last-child{
+		border-bottom: none;
+	}
+}
+
+a.media-group-item,
+a.list-group-item{
+	color: $gray-dark;
+	&:hover, &:focus{
+		background-color: #f5f7f9;
+	}
+}
+
+.scalable-menu{
+	opacity: 0;
+	max-height: 0;
+	display: block;
+	overflow: hidden;
+	transform: scale(.5);
+	transform-origin: top left;
+	transition: transform .5s cubic-bezier(0.24, 0.22, 0.015, 1.56);
+}
+
+.pull-right .scalable-menu,
+.navbar-right .scalable-menu{
+	transform-origin: top right;
+}
+
+.pull-right .dropdown-menu{
+	right: 0;
+	left: auto;
+}
+
+.open>.scalable-menu{
+	opacity: 1;
+	max-height: 20rem;
+	transform: scale(1);
+}
+
+// reset
+
+.dropdown-menu{
+	@include box-shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+	border: none;
+	&>li{
+		a{
+			padding: 6px 16px;
+			border: none;
+			&:hover,
+			&:focus{
+				background-color: #f5f7f9;
+			}
+		}
+
+		&:last-child{
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+.media-left{
+	padding: 0;
+}
+
+.media-heading{
+	margin-top: 4px;
+	margin-bottom:4px;
+	font-weight: 500;
+	a{
+		color: $title-color;
+	}
+}
+
+.media-meta{
+	font-size: 12px !important;
+	color: $text-muted;
+}
+
+.badge{
+	border-radius: 2px;
+	font-size: 10px;
+}

@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for routes/Users/containers/UserViewModalContainer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">routes/Users/containers/</a> UserViewModalContainer.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/48</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { connect } from 'react-redux'
+import { reduxForm } from 'redux-form'
+import { selectors, actions } from '../modules/user-view'
+import { actions as userActions } from 'store/users'
+import { selectors as groupSelectors, actions as groupActions } from 'store/groups'
+import { UserViewModal } from '../components'
+import { modifyUser, addUserToGroups, removeUserFromGroup } from 'modules/api'
+import validateUser from 'store/users/validate-user'
+&nbsp;
+export default connect((state) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+  const userView = <span class="cstat-no" title="statement not covered" >selectors.getUser(state)</span>
+  let user = <span class="cstat-no" title="statement not covered" >null</span>
+  let initialValues = <span class="cstat-no" title="statement not covered" >{}</span>
+  let userIsDisabled = <span class="cstat-no" title="statement not covered" >false</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (userView) {</span>
+<span class="cstat-no" title="statement not covered" >    user = selectors.getUser(state)</span>
+    const {
+      id,
+      first_name,
+      last_name,
+      email_address,
+      is_admin,
+      groups,
+      base64Image,
+      quota,
+      storage_location
+    } = <span class="cstat-no" title="statement not covered" >user</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userIsDisabled = user.is_disabled</span>
+    let uploadImage = <span class="cstat-no" title="statement not covered" >{}</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    initialValues = {</span>
+      id,
+      first_name,
+      last_name,
+      email_address,
+      is_admin,
+      groups: JSON.stringify(groups.map(group =&gt; (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{ value: group.id, label: group.name })</span></span>)),
+      base64Image,
+      quota,
+      storage_location,
+      uploadImage
+    }
+  }
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    user,
+    initialValues,
+    userIsDisabled,
+    showModal: !!user,
+    sendingInvite: selectors.sendingInvite(state),
+    sendInviteComplete: selectors.sendInviteComplete(state),
+    resettingPassword: selectors.resettingPassword(state),
+    resetPasswordComplete: selectors.resetPasswordComplete(state),
+    changingUserActiveStatus: selectors.changingUserActiveStatus(state),
+    groups: groupSelectors.getGroups(state)
+  }
+}, (dispatch) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    hideModal: () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(actions.hideUserModal())</span>
+    },
+    showDeleteUserModal: () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(actions.showDeleteUserModal())</span>
+    },
+    sendUserInvite: () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(actions.sendInviteRequest())</span>
+    },
+    resetUserPassword: () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(actions.resetUserPasswordRequest())</span>
+    },
+    deactivateUser: () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+      const req = <span class="cstat-no" title="statement not covered" >dispatch(actions.deactivateUserRequest())</span>
+<span class="cstat-no" title="statement not covered" >      req.then(() =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+        const user = <span class="cstat-no" title="statement not covered" >dispatch((dispatch, getState) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >selectors.getUser(getState()))</span></span></span>
+<span class="cstat-no" title="statement not covered" >        dispatch(userActions.updateUser(user))</span>
+      })
+    },
+    activateUser: () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+      const req = <span class="cstat-no" title="statement not covered" >dispatch(actions.activateUserRequest())</span>
+<span class="cstat-no" title="statement not covered" >      req.then(() =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+        const user = <span class="cstat-no" title="statement not covered" >dispatch((dispatch, getState) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >selectors.getUser(getState()))</span></span></span>
+<span class="cstat-no" title="statement not covered" >        dispatch(userActions.updateUser(user))</span>
+      })
+    },
+    changeImage: (user) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(actions.changeUserImage(user))</span>
+    }
+  }
+})(reduxForm({
+  form: 'user-form',
+  enableReinitialize: true,
+  validate: validateUser,
+  onSubmit: (values, dispatch, props) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return new Promise((resolve, reject) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+      let user = <span class="cstat-no" title="statement not covered" >{</span>
+        email_address: values.email_address,
+        first_name: values.first_name,
+        last_name: values.last_name,
+        profile_image: values.profile_image,
+        quota: values.quota,
+        storage_location: values.storage_location
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      modifyUser(user).then((res) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        dispatch(userActions.updateUser(values))</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(actions.hideUserModal())</span>
+        // image uploading
+<span class="cstat-no" title="statement not covered" >        if (values.upload_image !== {}) {</span>
+<span class="cstat-no" title="statement not covered" >          dispatch(userActions.uploadImage(values.email_address, values.upload_image))</span>
+        }
+&nbsp;
+        // add or remove a user from groups
+        let groupIds = <span class="cstat-no" title="statement not covered" >JSON.parse(values.groups).map(group =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >group.value)</span></span></span>
+        let defaultGroupIds = <span class="cstat-no" title="statement not covered" >JSON.parse(props.initialValues.groups).map(group =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >group.value)</span></span></span>
+        let removeGroupIds = <span class="cstat-no" title="statement not covered" >groupIds.length &gt; 0 ? defaultGroupIds.filter(group =&gt;</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >          groupIds.indexOf(group) === -1)</span></span> : defaultGroupIds
+        let addGroupIds = <span class="cstat-no" title="statement not covered" >defaultGroupIds.length &gt; 0 ? groupIds.filter(group =&gt;</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >          defaultGroupIds.indexOf(group) === -1)</span></span> : groupIds
+&nbsp;
+        let userId = <span class="cstat-no" title="statement not covered" >values.id</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (addGroupIds.length &gt; 0) {</span>
+          let userGroupIds = <span class="cstat-no" title="statement not covered" >addGroupIds</span>
+<span class="cstat-no" title="statement not covered" >          addUserToGroups({ user_id: userId, user_group_ids: userGroupIds }).then(() =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >            dispatch(groupActions.addUserToGroups({ user, userGroupIds }))</span>
+          })
+        }
+<span class="cstat-no" title="statement not covered" >        if (removeGroupIds.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >          removeGroupIds.map((groupId) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >            removeUserFromGroup({ id: groupId, user_id: userId }).then(() =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >              dispatch(groupActions.removeUserFromGroup({ userId, groupId }))</span>
+            })
+          })
+        }
+      }).catch(reject)
+    })
+  }
+})(UserViewModal))
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 16 2017 04:46:09 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

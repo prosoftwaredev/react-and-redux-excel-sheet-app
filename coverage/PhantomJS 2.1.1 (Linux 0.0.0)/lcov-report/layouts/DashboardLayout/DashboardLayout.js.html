@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for layouts/DashboardLayout/DashboardLayout.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">layouts/DashboardLayout/</a> DashboardLayout.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.18% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.18% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import { Link } from 'react-router'
+import { connect } from 'react-redux'
+import uuid from 'uuid/v1'
+&nbsp;
+import { AuthenticatedComponent } from 'store/auth/components'
+import { CreateSheetModalContainer } from 'routes/Sheets/containers'
+import { setToken } from 'modules/api'
+import { selectors as authSelectors } from 'store/auth'
+import { actions as sheetActions, selectors as sheetSelectors } from 'store/sheets'
+import { selectors as layoutSelectors, actions as layoutActions } from 'store/layout'
+import onClickOutside from 'react-onclickoutside'
+&nbsp;
+import createReactClass from 'create-react-class'
+// import DashboardMenu from './DashboardMenu'
+import DashboardNav from './DashboardNav'
+&nbsp;
+@AuthenticatedComponent
+class DashboardLayout extends React.Component {
+  componentWillMount () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    setToken(this.props.authToken)</span>
+<span class="cstat-no" title="statement not covered" >    this.props.getAllSheets()</span>
+  }
+&nbsp;
+  render () <span class="fstat-no" title="function not covered" >{</span>
+    const { children, sheetTitle, sheetList, displaySheetList, toggleSheetList, showSheetModal } = <span class="cstat-no" title="statement not covered" >this.props</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;div className='sb-top' style={{ height: '100%' }}&gt;
+        &lt;div className='breadcumb blue-dark'&gt;
+          &lt;div className='container'&gt;
+            &lt;DashboardLayoutContent
+              sheetTitle={sheetTitle}
+              sheetList={sheetList}
+              displaySheetList={displaySheetList}
+              toggleSheetList={toggleSheetList}
+              showSheetModal={showSheetModal} /&gt;
+            &lt;div className='litigation'&gt;Demo Law Firm&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;DashboardNav /&gt;
+        &lt;CreateSheetModalContainer /&gt;
+        &lt;main id='app-main' className='app-main in'&gt;
+          &lt;div className='container'&gt;
+            &lt;div&gt;
+              {children}
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;footer className='app-footer'&gt;
+                &lt;div className='row'&gt;
+                  &lt;div className='col-md-6 text-md-center'&gt;
+                    &lt;div className='privacy-terms'&gt;
+                      &lt;ul&gt;
+                        &lt;li&gt;
+                          &lt;a href='javascript:void(0)'&gt;
+                            Privacy Policy
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                          &lt;a href='javascript:void(0)'&gt;
+                            Terms of Use
+                          &lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div className='copyright'&gt;Copyright LawMap App 2017 &amp;copy;&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/footer&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/main&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+&nbsp;
+DashboardLayout.displayName = 'DashboardLayout'
+DashboardLayout.propTypes = {
+  children : React.PropTypes.object.isRequired,
+  authToken: React.PropTypes.string.isRequired,
+  sheetTitle: React.PropTypes.string.isRequired,
+  sheetList: React.PropTypes.array.isRequired,
+  displaySheetList: React.PropTypes.bool.isRequired,
+  toggleSheetList: React.PropTypes.func.isRequired,
+  getAllSheets: React.PropTypes.func.isRequired,
+  showSheetModal: React.PropTypes.func.isRequired
+}
+&nbsp;
+DashboardLayout.defaultProps = {
+  authToken: '',
+  children: [],
+  sheetTitle: '...',
+  sheetList: [],
+  displaySheetList: false
+}
+&nbsp;
+const DashboardLayoutContent = onClickOutside(createReactClass({
+  propTypes: {
+    toggleSheetList: React.PropTypes.func.isRequired,
+    displaySheetList: React.PropTypes.bool.isRequired,
+    sheetTitle: React.PropTypes.string.isRequired,
+    sheetList: React.PropTypes.array.isRequired,
+    showSheetModal: React.PropTypes.func.isRequired
+  },
+  handleClickOutside () {
+<span class="cstat-no" title="statement not covered" >    this.props.toggleSheetList(false)</span>
+  },
+  toggle () {
+<span class="cstat-no" title="statement not covered" >    this.props.toggleSheetList(!this.props.displaySheetList)</span>
+  },
+  render () {
+    const { sheetTitle, sheetList, displaySheetList, showSheetModal } = <span class="cstat-no" title="statement not covered" >this.props</span>
+    let openMenuClass = <span class="cstat-no" title="statement not covered" >displaySheetList ? 'open' : ''</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+&nbsp;
+      &lt;div className={`sheet ${openMenuClass}`}&gt;
+        &lt;a className='dropdown-toggle' type='button' onClick={this.toggle}&gt;
+          { sheetTitle }
+          &lt;span className='caret' /&gt;
+        &lt;/a&gt;
+        &lt;ul className='dropdown-menu'&gt;
+          { sheetList.map(sheet =&gt; (
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >            &lt;li key={uuid()} onClick={this.toggle}&gt;</span></span>
+              &lt;Link to={`sheets/${sheet.id}`} onClick={this.toggle}&gt;{sheet.title}&lt;/Link&gt;
+            &lt;/li&gt;
+          ))}
+          &lt;li&gt;
+            &lt;a href='javascript:void(0)' onClick={showSheetModal}&gt;
+              &lt;i className='m-r-md fa fa-plus' /&gt;
+              Create new sheet
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    )
+  }
+}))
+&nbsp;
+export default connect((state) =&gt; (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+  authToken: authSelectors.getToken(state),
+  sheetTitle: sheetSelectors.getCurrentSheet(state).title,
+  sheetList: sheetSelectors.getSheetList(state) || [],
+  displaySheetList: layoutSelectors.displaySheetList(state)
+}), (dispatch, props) =&gt; (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+  toggleSheetList: (isOpen) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >dispatch(layoutActions.toggleSheetList(isOpen)),</span></span>
+  getAllSheets: () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    dispatch(sheetActions.requestAllSheets())</span>
+      .then(res =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        if (props.params &amp;&amp; props.params.id) {</span>
+<span class="cstat-no" title="statement not covered" >          dispatch(sheetActions.requestSheet(props.params.id))</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          dispatch(sheetActions.requestSheet(res.data[0].id))</span>
+        }
+      })
+  },
+  showSheetModal: () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >dispatch(sheetActions.showSheetModal())</span></span>
+}))(DashboardLayout)
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 16 2017 04:46:09 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

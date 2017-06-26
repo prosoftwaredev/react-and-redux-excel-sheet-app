@@ -1,0 +1,110 @@
+.btn {
+	outline: 0 !important;
+	font-weight: 500;
+	font-size: 14px;
+	padding: 8px 16px;
+}
+
+.btn:focus,
+.btn:active{
+	outline: none;
+}
+
+.form-inline{
+	.btn{
+		height: 38px;
+	}
+}
+
+//= Button sizes
+
+.btn-xs{
+	padding: 2px 6px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+}
+
+.btn-sm{
+	padding: 6px 12px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+}
+
+.btn-lg{
+	padding: 12px 16px;
+	font-size: 18px;
+	line-height: 1.3333;
+	border-radius: 3px;
+}
+
+//= Extends bootstrap default btn brand classes
+// purple
+.btn-purple {
+  @include button-variant($btn-purple-color, $btn-purple-bg, $btn-purple-border);
+}
+
+// pink
+.btn-pink {
+  @include button-variant($btn-pink-color, $btn-pink-bg, $btn-pink-border);
+}
+
+// inverse
+.btn-inverse {
+  @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+}
+
+// dark
+.btn-dark {
+  @include button-variant($btn-dark-color, $btn-dark-bg, $btn-dark-border);
+}
+
+//= Outlined buttons
+.btn.btn-outline{
+	border-width: 1px;
+	border-style: solid;
+	background-color: transparent;
+}
+
+.btn-outline.btn-primary {
+  @include btn-outline-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.btn-outline.btn-info {
+  @include btn-outline-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+
+.btn-outline.btn-success {
+  @include btn-outline-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+
+.btn-outline.btn-warning {
+  @include btn-outline-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+
+.btn-outline.btn-danger {
+  @include btn-outline-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+.btn-outline.btn-purple {
+  @include btn-outline-variant($btn-purple-color, $btn-purple-bg, $btn-purple-border);
+}
+
+.btn-outline.btn-pink {
+  @include btn-outline-variant($btn-pink-color, $btn-pink-bg, $btn-pink-border);
+}
+
+.btn-outline.btn-inverse {
+  @include btn-outline-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+}
+
+.btn-outline.btn-dark {
+  @include btn-outline-variant($btn-dark-color, $btn-dark-bg, $btn-dark-border);
+}
+
+#buttons-demo-page{
+	.btn{
+		margin-bottom: 24px;
+	}
+}

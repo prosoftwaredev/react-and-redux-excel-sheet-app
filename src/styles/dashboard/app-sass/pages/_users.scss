@@ -1,0 +1,57 @@
+#users-page {
+
+  #table-with-filter  {
+
+    .filter-sidebar {
+
+      .sidebar-header-options {
+        .list-group {
+          margin: 10px 0px;
+        }
+      }
+
+      .list-group-item {
+        padding: 10px 3px;
+      }
+
+    }
+
+    .item-data {
+      .input-group-addon, .input-group {
+        background: transparent;
+        border: none;
+      }
+      .input-group {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      &:hover {
+        .pull-right {
+          .number {
+            display: none;
+          }
+          .delete-group {
+            display: inline;
+          }
+        }
+      }
+      .pull-right .delete-group {
+        display: none;
+      }
+    }
+
+    table {
+      > tbody {
+        > tr {
+          > td {
+            vertical-align: middle;
+
+            &.column-image-profile {
+              width: 56px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

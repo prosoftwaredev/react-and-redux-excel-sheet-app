@@ -1,0 +1,31 @@
+.side-panel{
+  position: fixed;
+  right: -100%;
+  transition: all .5s ease;
+  &.open {
+    right: 0;
+    left: auto;
+  }
+
+  .panel-header {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .panel-title {
+    margin: 0;
+    color: #333;
+  }
+}
+
+.side-panel{
+  width: 240px;
+  background-color: #fff;
+  @include box-shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+  height: calc(100% - 60px);
+
+  .scrollable-container {
+    position: relative;
+    height: calc(100% - 57px) !important;
+  }
+}

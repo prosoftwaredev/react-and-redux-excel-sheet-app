@@ -1,0 +1,24 @@
+.panel{
+  margin-bottom: $margin-lg;
+}
+.panel.note-editor{
+  margin-bottom: 0;
+}
+.panel-heading,
+.modal-header{
+  padding: $padding-lg $padding-md;
+}
+
+.modal-content{
+  border-radius: 3px;
+}
+
+.panel-body{
+  padding: $padding-lg $padding-md;
+}
+
+.panel-footer,
+.modal-footer{
+  background: #f5f7f9;
+  padding: $padding-sm $padding-md;
+}

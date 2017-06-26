@@ -1,0 +1,56 @@
+#login-form {
+  .logo {
+    text-align: center;
+    margin: 6px 0 30px 0;
+    img {
+      width: 98px;
+      height: 98px;
+    }
+  }
+  .checkbox-primary {
+    display: inline-block;
+  }
+  .forgot-password {
+    display: inline-block;
+    float: right;
+    a {
+      color: #cac8c8;
+    }
+  }
+  .input-with-icon {
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(204, 204, 204, 1);
+    box-shadow: 0px 0px 7px 0px rgba(204, 204, 204, 1);
+    position: relative;
+    input {
+      width: 90%;
+      margin-left: 10px;
+      border: none;
+    }
+    i {
+      position: absolute;
+      top: 50%;
+      margin-top: -8px;
+      right: 16px;
+    }
+  }
+  .buttons {
+    text-align: center;
+  }
+  .btn-login {
+    background-color: #002144;
+    color: #fff !important;
+    width: 200px;
+  }
+  footer {
+    margin: 30px 0 0 6px;
+    text-align: center;
+    font-size: 16px;
+    span {
+      margin-right: 10px;
+    }
+    a {
+      color: #6a6c6f;
+    }
+  }
+}

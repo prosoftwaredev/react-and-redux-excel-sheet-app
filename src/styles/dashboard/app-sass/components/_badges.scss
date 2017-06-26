@@ -1,0 +1,27 @@
+.badge-primary{
+	@include badge-variant($primary, #fff);
+}
+.badge-info{
+	@include badge-variant($info, #fff);
+}
+.badge-success{
+	@include badge-variant($success, #fff);
+}
+.badge-warning{
+	@include badge-variant($warning, #fff);
+}
+.badge-danger{
+	@include badge-variant($danger, #fff);
+}
+.badge-pink{
+	@include badge-variant($pink, #fff);
+}
+.badge-purple{
+	@include badge-variant($purple, #fff);
+}
+.badge-inverse{
+	@include badge-variant($inverse, #fff);
+}
+.badge-dark{
+	@include badge-variant($dark, #fff);
+}

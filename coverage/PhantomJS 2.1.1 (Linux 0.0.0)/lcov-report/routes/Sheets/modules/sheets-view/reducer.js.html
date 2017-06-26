@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for routes/Sheets/modules/sheets-view/reducer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">routes/Sheets/modules/sheets-view/</a> reducer.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.09% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.09% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/11</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createReducer } from 'modules/redux-utils'
+import t from './actionTypes'
+&nbsp;
+// initialState
+const initialState = {
+  showModal: false,
+  showFieldModal: false,
+  currentRecord: null,
+  sortField: null,
+  searchText: '',
+  currentField: '',
+  showFilters: false
+}
+&nbsp;
+export default createReducer(initialState, {
+  [t.SHOW_CREATE_RECORD_MODAL]: (state, payload) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.assign({}, initialState, {</span></span>
+    showModal: true,
+    currentRecord: null
+  }),
+&nbsp;
+  [t.HIDE_CREATE_RECORD_MODAL]: (state, payload) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.assign({}, state, {</span></span>
+    showModal: false,
+    currentRecord: null
+  }),
+&nbsp;
+  [t.SHOW_EDIT_RECORD_MODAL]: (state, payload) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.assign({}, initialState, {</span></span>
+    showModal: true,
+    currentRecord: payload
+  }),
+&nbsp;
+  [t.HIDE_EDIT_RECORD_MODAL]: (state, payload) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.assign({}, state, {</span></span>
+    showModal: false,
+    currentRecord: null
+  }),
+&nbsp;
+  [t.SHOW_FIELD_MODAL]: (state, payload) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.assign({}, initialState, {</span></span>
+    showFieldModal: true,
+    currentField: payload
+  }),
+&nbsp;
+  [t.HIDE_FIELD_MODAL]: (state, payload) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.assign({}, state, {</span></span>
+    showFieldModal: false,
+    currentField: null
+  }),
+&nbsp;
+  [t.SORT_BY_FIELD]: (state, payload) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.assign({}, state, {</span></span>
+    sortField: payload
+  }),
+&nbsp;
+  [t.SET_SEARCH_TEXT]: (state, payload) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.assign({}, state, {</span></span>
+    searchText: payload
+  }),
+&nbsp;
+  [t.TOGGLE_FILTERS]: (state) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.assign({}, state, {</span></span>
+    showFilters: !state.showFilters
+  }),
+&nbsp;
+  [t.SET_CURRENT_FIELD]: (state, payload) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return Object.assign({}, state, { currentField: payload })</span>
+  }
+})
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 16 2017 04:46:09 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

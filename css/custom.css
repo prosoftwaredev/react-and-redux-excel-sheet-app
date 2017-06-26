@@ -1,0 +1,276 @@
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: 1px solid #343F4A
+}
+#features .img-session {
+    max-width: 309px
+}
+#features .img-secure {
+    max-width: 306px
+}
+#features .padding-bottom-50 {
+    padding-bottom: 50px
+}
+#hero-image h1 {
+    font-size: 22px
+}
+#hero-image p.text-encrypted {
+    font-size: 16px;
+    font-weight: 700;
+    color: #4386EB
+}
+#hero-image ul li {
+    padding: 10px 0
+}
+#hero-image ul li i {
+    margin-top: 4px
+}
+#hero-image ul li span {
+    margin-left: 30px;
+    display: block;
+    font-size: 16px
+}
+#footer a {
+    font-size: 14px;
+    color: #B1BFCC
+}
+#footer a:hover {
+    color: #ffffff
+}
+#footer p {
+    font-size: 13px;
+    color: #606D79
+}
+#pricing {
+    padding-top: 140px
+}
+#pricing .price-plan {
+    background: #ffffff;
+    -moz-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #132230
+}
+#pricing p {
+    color: #ffffff;
+    line-height: 20px
+}
+#contact {
+    padding-top: 140px
+}
+#terms {
+    padding-top: 140px
+}
+#terms .panel-terms {
+    background: #FFFFFF;
+    padding: 30px;
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5)
+}
+#terms .panel-terms h2,
+#terms .panel-terms h3,
+#terms .panel-terms h4 {
+    color: #132230
+}
+#terms .panel-terms a {
+    color: #4386EB
+}
+#terms .panel-terms p,
+#terms .panel-terms ul,
+#terms .panel-terms li {
+    color: #6a6c6f;
+    font-size: 14px
+}
+#terms .panel-terms hr {
+    border-color: #eeeeee;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+#terms .panel-terms .form-group {
+    margin-bottom: 30px
+}
+#terms .panel-terms .form-group label {
+    color: #132230
+}
+.icon-md .icon {
+    display: inline-block
+}
+.icon-session {
+    background-image: url('../images/icons-s8e77975aff.png');
+    background-position: 0 -216px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: 64px;
+    width: 64px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .icon-session {
+        background-image: url('../images/icons-2x-s91be2f23cc.png');
+        background-size: 64px 408px;
+        background-position: 0 -216px;
+        height: 64px;
+        width: 64px
+    }
+}
+.icon-secure {
+    background-image: url('../images/icons-s8e77975aff.png');
+    background-position: 0 -152px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: 64px;
+    width: 64px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .icon-secure {
+        background-image: url('../images/icons-2x-s91be2f23cc.png');
+        background-size: 64px 408px;
+        background-position: 0 -152px;
+        height: 64px;
+        width: 64px
+    }
+}
+.icon-encrypted {
+    background-image: url('../images/icons-s8e77975aff.png');
+    background-position: 0 -280px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: 64px;
+    width: 64px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .icon-encrypted {
+        background-image: url('../images/icons-2x-s91be2f23cc.png');
+        background-size: 64px 408px;
+        background-position: 0 -280px;
+        height: 64px;
+        width: 64px
+    }
+}
+.icon-leader {
+    background-image: url('../images/icons-s8e77975aff.png');
+    background-position: 0 -88px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: 64px;
+    width: 64px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .icon-leader {
+        background-image: url('../images/icons-2x-s91be2f23cc.png');
+        background-size: 64px 408px;
+        background-position: 0 -88px;
+        height: 64px;
+        width: 64px
+    }
+}
+.icon-pencil {
+    background-image: url('../images/icons-s8e77975aff.png');
+    background-position: 0 -24px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: 64px;
+    width: 64px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .icon-pencil {
+        background-image: url('../images/icons-2x-s91be2f23cc.png');
+        background-size: 64px 408px;
+        background-position: 0 -24px;
+        height: 64px;
+        width: 64px
+    }
+}
+.icon-watch {
+    background-image: url('../images/icons-s8e77975aff.png');
+    background-position: 0 -344px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: 64px;
+    width: 64px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .icon-watch {
+        background-image: url('../images/icons-2x-s91be2f23cc.png');
+        background-size: 64px 408px;
+        background-position: 0 -344px;
+        height: 64px;
+        width: 64px
+    }
+}
+.icon-lock {
+    background-image: url('../images/icons-s8e77975aff.png');
+    background-position: -30px 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: 24px;
+    width: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .icon-lock {
+        background-image: url('../images/icons-2x-s91be2f23cc.png');
+        background-size: 64px 408px;
+        background-position: -30px 0;
+        height: 24px;
+        width: 16px
+    }
+}
+.icon-success {
+    background-image: url('../images/icons-s8e77975aff.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: 11px;
+    width: 14px;
+    float: left
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .icon-success {
+        background-image: url('../images/icons-2x-s91be2f23cc.png');
+        background-size: 64px 408px;
+        background-position: 0 0;
+        height: 11px;
+        width: 14px
+    }
+}
+.icon-feather {
+    background-image: url('../images/icons-s8e77975aff.png');
+    background-position: -14px 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: 16px;
+    width: 16px;
+    float: left
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .icon-feather {
+        background-image: url('../images/icons-2x-s91be2f23cc.png');
+        background-size: 64px 408px;
+        background-position: -14px 0;
+        height: 16px;
+        width: 16px
+    }
+}

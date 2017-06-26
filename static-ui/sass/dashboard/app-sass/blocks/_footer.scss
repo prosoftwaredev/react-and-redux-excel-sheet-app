@@ -1,0 +1,32 @@
+/** footer section **/
+.app-footer{
+  padding: 24px 0;
+  border-top: 1px solid #cccccc;
+  width: 100%;
+
+  @media only screen and (max-width: 991px) {
+    text-align: center;
+  }
+
+  .privacy-terms {
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-right: 15px;
+
+        a {
+          color: $gray;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .copyright{
+    display: block;
+    color: $gray-light;
+    font-size: 13px;
+  }
+}

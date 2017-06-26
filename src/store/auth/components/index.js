@@ -1,0 +1,1 @@
+export AuthenticatedComponent from './AuthenticatedComponent'
